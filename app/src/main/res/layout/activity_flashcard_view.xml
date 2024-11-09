@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".FlashcardViewActivity">
+
+    <!-- Flashcard container with flip animation -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewFlashcard"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        android:layout_centerInParent="true">
+
+        <FrameLayout
+            android:id="@+id/flashcardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Front side: Question -->
+            <TextView
+                android:id="@+id/textViewQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Question"
+                android:textSize="24sp"
+                android:visibility="visible"
+                android:background="@color/white"/>
+
+            <!-- Back side: Answer -->
+            <TextView
+                android:id="@+id/textViewAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Answer"
+                android:textSize="24sp"
+                android:visibility="gone"
+                android:background="@color/white"/>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Buttons below -->
+    <Button
+        android:id="@+id/buttonMarkKnown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark as Known"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/blue"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/buttonShuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shuffle"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/blue"
+        android:textColor="@android:color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
